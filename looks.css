@@ -137,19 +137,3 @@ video {
 	cursor: pointer;
 	font-size: 50px;
 }
-
-.Photography {
-	transition: 1s;
-}
-
-.Photography:hover {
-	padding-right: 80px;
-}
-
-.Photography-r {
-	transition: 1s;
-}
-
-.Photography-r:hover {
-	padding-left: 80px;
-}
