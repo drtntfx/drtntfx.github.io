@@ -146,6 +146,11 @@ video {
 }
 
 
+.heade img{
+	width: 1000px;
+}
+
+
 .header video {
 	height: 400px;
 	width: auto;
