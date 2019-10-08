@@ -159,7 +159,7 @@ button:hover {
 }
 
 
-@media(min-width: 900px) {
+@media(min-width: 1024px) {
 	ul{
 		visibility: visibles;
 		transition: 1s;
