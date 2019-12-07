@@ -11,6 +11,7 @@
 			padding: 0;
 			box-sizing: content-box;
 			font-family: 'Montserrat', sans-serif;
+			background-color: #ff7373;
 		}
 
 
@@ -22,15 +23,38 @@
 
 		.head{
 			padding: 150px 150px;
-			background-color: #e5e5e5;
+			background-color: #ff4f4f;
 		}
 
 		.head h1{
 			font-size: 65px;
+			background: none;
+			color: white;
 		}
 
-		.head p{
+		h1{
+			font-size: 45px;
+			color: white;
+		}
+
+		h6{
+			background: none;
+			color: white;
+		}
+
+		.mobile{
+			visibility: hidden;
 			font-size: 35px;
+			color: #fff;
+			text-align: center;
+		}
+
+
+
+		.head p{
+			color: white;
+			font-size: 35px;
+			background: none;
 		}
 
 
@@ -41,6 +65,7 @@
 			font-size: 25px;
 			 padding: 0 20px;
 			 transition: 0.5s ease;
+			 color: white;
 		}
 
 		.normal:hover{
@@ -49,21 +74,68 @@
 
 		.border-btn{
 			color: #fff;
-			background-color: black;
+			background-color: #ff2727;
 			font-weight: lighter;
 			padding: 15px 15px;
 			transition: 0.6s;
 			text-decoration: none;
 		}
 
+		.border{
+			color: #fff;
+			background-color: #ff2727;
+			font-weight: lighter;
+			padding: 15px 15px;
+			transition: 0.6s;
+			text-decoration: none;
+		}
+
+		.border:hover{
+			background-color: #fff;
+			color: #ff2727;
+			box-shadow: 0px 0px 20px #c9c9c9;
+		}
+
+		label{
+			margin: 0 40px 0 0;
+			font-size: 26px;
+			line-height: 70px;
+			display: none;
+		}
+
+		#toggle{
+			display: none;
+		}
+
 		.border-btn:hover{
 			background-color: #fff;
-			color: #000;
+			color: #ff2727;
 			box-shadow: 0px 0px 20px #c9c9c9;
+		}
+
+		@media only screen and (max-width: 1000px){
+
+
+			*{
+				background-color: #000;
+			}
+
+			.all{
+				display: none;
+			}
+
+			.mobile{
+				visibility: visible;
+			}
+		}
+
+		a{
+			background: none;
 		}
 
 		img{
 			height: 200px;
+			background: none;
 			padding: 10px 0px;
 			border-bottom: 8.5px solid #000;
 			transition: 0.5s ease;
