@@ -4,48 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/favicons/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:500,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="makeup.css">
-    <link rel="icon" href="logo.png">
-    <title>New Decade</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <link rel="stylesheet" href="assets/styles/design.css">
+    <title>drtnt</title>
 </head>
 <body>
-    <div class="navbar">
-        <a class="brand" href="index.html">drtnt</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="category.html">Browse</a>
-        <a style="word-spacing: normal;" href="tos.html">Terms of Service</a>
+    <div class="brand">
+        <a href="index.html" style="word-spacing: normal;">drtnt</a>
     </div>
-    <div class="hamburger">
-        <a style="font-weight: bolder; color: #1d1d1d; font-size: 34px;" href="menu.html">Ξ</a>
+    <div class="nav">
+        <a href="index.html" class="normal">Home</a>
+        <a href="portfolio.html" class="normal">Portfolio</a>
+        <a href="shop.html" class="normal">Products</a>
+        <a href="#" class="normal" style="color: white;">|</a>
+        <a href="https://www.youtube.com/channel/UCKVY1wNk_aVyZ8rmW4rCDMg?view_as=subscriber" target="_blank" class="normal">YouTube</a>
+        <a href="https://www.soundcloud.com/trashdoesmusic" target="_blank" class="normal">SoundCloud</a>
     </div>
-    <div class="head">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="title">
         <h1>drtnt</h1>
-        <p>music, intros, web, design, photography</p>
-        <br>
-        <a class="box" href="category.html">Browse</a>
-        <br i know its a lot of spaces query...>
+        <p>motion, web, design, music</p>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>Lets get to meet each other.</p>
-        <br>
-        <a class="box" href="discord.gg/S8W5BzV" target="_blank">discord lounge</a>     
+        <a href="#projects" class="box">projects</a>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="projects" id="projects">
+        <h3>Recent Activity</h3>
+        <br>
+        <br>
+        <a href="https://www.youtube.com/watch?v=XfxVQ00jf5w" class="video" target="_blank">
+        <img src="salty.PNG" alt="salty">
+        </a>
+        <a href="https://www.youtube.com/watch?v=7v9PZGkZOx4" class="video" target="_blank">
+            <img src="etun.PNG" alt="etun">
+            </a>
+            <a href="https://www.youtube.com/watch?v=4h-WUD-6FSA" class="video" target="_blank">
+                <img src="not.PNG" alt="not">
+                </a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=l0LiVd_fqww" class="video" target="_blank">
+                    <img src="artifact.PNG" alt="not">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=V6Qil99GRz0" class="video" target="_blank">
+                        <img src="intro.PNG" alt="not">
+                        </a>
+        <br>
+        <br>
+        <a href="portfolio.html" class="box">watch more          ></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+
+// navigation starts here
+$("#toggle").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $("#resize ul li a").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $(".close-btn").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+new WOW().init();
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+
+</script>
 </body>
 </html>
